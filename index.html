@@ -4,15 +4,218 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <title>Oscaro.com</title>
-    <link rel="stylesheet" href="assets/css/style.css" />
 <!-- .............................CSS....................... -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+    <link rel="stylesheet" href="assets/css/style.css" />
   </head>
   <body>
-    
+    <header>
+    <div class="container">
+    <div class="home d-flex justify-content-around">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Sélectionnez votre véhicule</h5>
+          <form class="form-inline">
+            <div class="form-group mx-auto">
+              <input type="text" class="form-control text-center" id="imatriculation" aria-describedby="imatriculation" placeholder="AA-456-BB" />
+            </div>
+            <div>
+              <button type="submit" class="btn btn-success">Ok</button>
+            </div>
+          </form>
+          <button type="button" class="btn btn-outline-secondary border-0" data-toggle="modal" data-target="#modalHome">
+            PAR MODELE >
+          </button>
+          <button type="button" class="btn btn-outline-secondary border-0" data-toggle="modal" data-target="#modalHome">
+            PAR CARTE GRISE >
+          </button>
+        </div>
+      </div>
+      <div class="card h-50">
+        <div class="card-body">
+          <h5 class="card-title">Recherche de pièces</h5>
+          <form class="form-inline">
+            <div class="form-group border border-secondary">
+              <input type="text" class="form-control border-0" id="piece" aria-describedby="piece" placeholder="Ex: Batterie, GDB1330, ..." />
+              <button type="submit" class="btn">Ok</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="modalHome" tabindex="-1" role="dialog" aria-labelledby="modalHome" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalHome">Sélectionnez votre véhicule</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <form class="form-inline">
+            <div class="form-group bg-secondary container">
+              <div class="row">
+                <p>PAR PLAQUE D'IMMATRICULATION</p>
+                <input type="text" class="form-control text-center" id="imatriculation" aria-describedby="imatriculation" placeholder="AA-456-BB" />
+                <button type="submit" class="btn btn-success">Ok</button>
+              </div>
+            </div>
+          </form>
+          <div class="row">
+            <div class="col border-right">
+              <p>PAR MODELE</p>
+              <div class="dropdown">
+                <button class="dropdown-toggle btn btn-outline-dark" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  O SECOUR
+                </button>
+                <div class="dropdown-menu" aria-labelledby="AU SECROUT">
+                  <a class="dropdown-item" href="#">Audi</a>
+                  <a class="dropdown-item" href="#">Renault</a>
+                  <a class="dropdown-item" href="#">Ford</a>
+                  <a class="dropdown-item" href="#">Fiat</a>
+                </div>
+              </div>
+              <div class="dropdown">
+                <button class="dropdown-toggle btn btn-outline-dark disabled" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  A LAIDE
+                </button>
+                <div class="dropdown-menu" aria-labelledby="A L'AIDE">
+                  <a class="dropdown-item" href="#">Action</a>
+                  <a class="dropdown-item" href="#">Another action</a>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+              </div>
+              <div class="dropdown">
+                <button class="dropdown-toggle btn btn-outline-dark disabled" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  C TRO DUR
+                </button>
+                <div class="dropdown-menu" aria-labelledby="C TRO DUR">
+                  <a class="dropdown-item" href="#">Action</a>
+                  <a class="dropdown-item" href="#">Another action</a>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+              </div>
+              <div class="dropdown">
+                <button class="dropdown-toggle btn btn-outline-dark disabled" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  JE QUITTE LA FORMATION
+                </button>
+                <div class="dropdown-menu" aria-labelledby="JE QUITTE LA FORMATION">
+                  <a class="dropdown-item" href="#">Action</a>
+                  <a class="dropdown-item" href="#">Another action</a>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <p>PAR CARTE GRISE OU VIN <button type="button" class="btn border border-primary rounded-circle text-primary" data-toggle="modal2" data-target="#modal2">?</button></p>
+              <div class="modal fade" id="modal2" tabindex="-1" role="dialog" aria-labelledby="modalHome" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="modal2">Sélectionnez votre véhicule</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    <div class="container-fluid machin text-center">
+      <div class="row">
+        <div class="col">
+          <h2><i class="fas fa-award"></i></h2>
+          <h5>PIECES NEUVES ET D'ORIGINE</h5>
+          <p>au meilleur prix</p>
+        </div>
+        <div class="col">
+          <h2><i class="fas fa-graduation-cap"></i></h2>
+          <h5 class="d-inline-block">180 EXPERTS EN MÉCANIQUE</h5>
+          <p>à votre écoute</p>
+        </div>
+        <div class="col">
+          <h2><i class="fab fa-leanpub"></i></h2>
+          <h5>LE PLUS GRAND CATALOGUE</h5>
+          <p>d'Europe</p>
+        </div>
+        <div class="col">
+          <h2><i class="fas fa-dolly"></i></h2>
+          <h5>LIVRAISON</h5>
+          <p>chez vous ou en point relais</p>
+        </div>
+      </div>
+    </div>
+  </header>
+  <footer>
+    <div class="container-fluid footer">
+      <div class="row">
+        <div class="col text center">
+          <ul>
+        <li><a href="https://www.oscaro.com/fr/faq" class="text-decoration-none text-dark">Aide et contact</a></li>
+          <li><a href="https://www.oscaro.com/fr/info/contact" class="text-decoration-none text-dark">Nous contacter</a></li>
+          <li><a href="https://www.oscaro.com/fr/faq/sav/return" class="text-decoration-none text-dark">Retourner un produit</a></li>
+          <li><a href="https://www.oscaro.com/fr/info/livraison" class="text-decoration-none text-dark">Mode de livraison</a></li>
+          <li><a href="https://www.oscaro.com/fr/info/modes-de-paiement" class="text-decoration-none text-dark">Modes de paiement</a></li>
+          <li><img src="assets/img/cards.jpg" alt="cards" id="cards"></li>
+          <li>
+            <img src="assets/img/paypal.png" alt="cards" class="images">
+            <img src="assets/img/americanexpress.png" alt="cards" class="images">
+          </li>
+          <li><img src="assets/img/paylib.png" alt="cards" class="images"></li>
+          </ul>
+        </div>
+        <div class="col">
+          <ul>
+          <li><a href="https://www.oscaro.com/fr/info/qui-sommes-nous" class="text-decoration-none text-dark">Qui sommes-nous?</a></li>
+          <li><a href="https://www.oscaro.com/fr/espace-presse" class="text-decoration-none text-dark">Espace presse</a></li>
+          <li><a href="https://recrutement.oscaro.com/fr" class="text-decoration-none text-dark">Rejoignez-nous!</a></li>
+          <li><a href="https://conseils.oscaro.com/" class="text-decoration-none text-dark">Conseils mécanique</a></li>
+          <li><a href="https://www.teamoscaro.com/" class="text-decoration-none text-dark">Team Oscaro, sponsoring et mécénat</a></li>
+          </ul>
+        </div>
+        <div class="col">
+          <ul>
+          <li><a href="https://www.oscaro.com/fr/all-manufacturers" class="text-decoration-none text-dark">Constructeurs Auto</a></li>
+          <li><a href="https://www.oscaro.com/fr/info/securite-confidentialite" class="text-decoration-none text-dark">Politique de sécurité et confidentialité</a></li>
+          <li><a href="https://www.oscaro.com/fr/info/cgv" class="text-decoration-none text-dark">Conditions générales de vente</a></li>
+          </ul>
+        </div>
+        <div class="col">
+          <ul>
+            <li>Oscaro international :</li>
+            <li><a href="https://www.oscaro.es/" class="text-decoration-none text-dark"><img src="assets/img/espagne.png" alt="" class="images">  Recambios coche- Oscaro Espagne</a></li>
+            <li><a href="https://www.oscaro.pt/" class="text-decoration-none text-dark"><img src="assets/img/portugal.png" alt="" class="images"> Peças Auto- Oscaro Portugal</a></li>
+            <li><a href="https://www.oscaro.be/fr" class="text-decoration-none text-dark"><img src="assets/img/belgique.jpg" alt="" class="images"> Pièces Auto- Oscrao Belgique</a></li>
+            <li><img src="assets/img/oscaro.jpg" alt="oscaro" id="oscaro"></li>
+            <li>
+              <a href="https://www.facebook.com/Oscaro/" ><img src="assets/img/facebook.png" alt="facebookLink" class="reseaux" ></a>
+            <a href="https://twitter.com/oscaro" ><img src="assets/img/twitter.png" alt="twitterLink" class="reseaux" ></a>
+            <a href="https://www.youtube.com/user/oscaro" ><img src="assets/img/youtube.jpg" alt="youtubeLink" class="reseaux" ></a>
+            <a href="https://fr.linkedin.com/company/oscaro" ><img src="assets/img/linkedin.jpg" alt="linkedinLink" class="reseaux" ></a>
+          </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="row fin text-center">
+      <div class="col">
+        <p>Copyright 2011-2019 - OSCARO SA - Tous droits réservés</p>
+        <p><a href="https://www.fevad.com/mediation/#topContent"><img src="assets/img/fevad.png" alt="fevad" id="fevad"></a></p>
+        <p>Oscaro.com adhère à la Fédération du e-commerce et de la vente à distance (FEVAD) et au service de médiation du e-commerce (60 rue de la Boétie – 75008 Paris – relationconso@fevad.com)</p>
+
+      </div>
+    </div>
+  </footer>
+
 <!-- .............................JS, Popper.js, and jQuery....................... -->
-      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    </body>
-  </html>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/e62bfb7085.js" crossorigin="anonymous"></script>
+  </body>
+</html>

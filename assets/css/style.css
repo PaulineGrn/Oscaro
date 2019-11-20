@@ -1,0 +1,42 @@
+header {
+  background-image: url(../img/fond.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-top: 200px;
+}
+.machin {
+  height: 130px;
+  background-color: #D4D4D4;
+  margin-top: 200px;
+}
+.footer {
+  height: 300px;
+  background-color: #D4D4D4;
+}
+li {
+  list-style: none;
+  padding: 3px;
+}
+.images {
+  width: 10%;
+  height: 10%;
+}
+#oscaro {
+  width: 20%;
+  height: 20%;
+}
+.reseaux {
+  width: 6%;
+  height: 6%;
+}
+#cards {
+  width: 35%;
+  height: 35%;
+}
+.fin {
+  height: 110px;
+}
+#fevad {
+  width: 35px;
+  height: 35px;
+}
